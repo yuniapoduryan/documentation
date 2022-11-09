@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Tourney:wght@600&display=swap');
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+#lang {
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    /* or 82% */
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+nav {
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    display: flex;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 50px;
+}
+
+h2 {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.chapter {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+}
+
+.title {
+    display: flex;
+}
+
+p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+a {
+    color: black;
+}
+
+code {
+    background-color: #DADADA;
+    font-family: 'PT Sans'
+}
+
+section {
+    padding-top: 96px;
+}
+
+@media (width < 750px) {
+    #lang {
+        display: none;
+    }
+}
+
+@media (width < 530px) {
+    img {
+        display: none;
+    }
+}
