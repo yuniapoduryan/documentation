@@ -1,30 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Tourney:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Tourney:wght@600&display=swap");
+* {
+    box-sizing: border-box;
+}
+
 body {
     max-width: 1200px;
     margin: auto;
-    padding: 0 30px;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
     height: 80px;
     align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 0 30px;
+}
+
+header>img {
+    margin-left: auto;
+}
+
+main {
+    display: flex;
+    padding: 0 30px;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.bg_image {
+    position: fixed;
+    z-index: -1;
+    left: 56.39%;
+    right: -9.17%;
+    top: 4.87%;
+    bottom: 70.46%;
+    overflow: hidden;
+}
+
+aside {
+    margin-top: 96px;
+    width: 385px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li a {
+    text-decoration: none;
+    border-bottom: 1px solid #dadada;
 }
 
 #lang {
-    font-family: 'Tourney';
+    font-family: "Tourney";
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 18px;
-    /* or 82% */
     text-align: center;
     letter-spacing: 0.04em;
 }
 
 nav {
-    font-family: 'Staatliches';
+    font-family: "Staatliches";
     font-weight: 400;
     font-size: 22px;
     line-height: 28px;
@@ -39,17 +82,29 @@ nav {
 }
 
 h2 {
-    font-family: 'Francois One';
+    font-family: "Francois One";
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    white-space: nowrap;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.04em;
+    color: #000000;
 }
 
 .chapter {
-    font-family: 'Farro';
+    font-family: "Farro";
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -61,8 +116,15 @@ h2 {
     display: flex;
 }
 
+.divider {
+    background-color: black;
+    height: 8px;
+    width: 100px;
+    border-radius: 0px;
+}
+
 p {
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -74,22 +136,55 @@ a {
 }
 
 code {
-    background-color: #DADADA;
-    font-family: 'PT Sans'
+    background-color: #dadada;
+    font-family: "PT Sans";
 }
 
 section {
-    padding-top: 96px;
+    margin-top: 96px;
 }
 
-@media (width < 750px) {
-    #lang {
-        display: none;
-    }
+.flip-cards {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
-@media (width < 530px) {
-    img {
-        display: none;
-    }
+.flip-card {
+    width: 270px;
+    height: 180px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    background-color: #E6E6E6;
+}
+
+.flip-card-back {
+    background-color: black;
+    transform: rotateX(180deg);
 }
